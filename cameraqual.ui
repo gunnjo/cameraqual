@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>500</y>
+      <width>102</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Exit</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>421</width>
+      <height>361</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>100</y>
+      <width>211</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Peak Signal-to-Noise Ratio&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>PSNR</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="PSNR">
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Structural SIMularity: &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>SSIM</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="SSIM">
+         <property name="text">
+          <string>0.0</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Black</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="BLACK">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>White</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="White">
+         <property name="text">
+          <string>255</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Frame</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="FrameNum">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionText">
+   <property name="text">
+    <string>text</string>
+   </property>
+   <property name="toolTip">
+    <string>tooltip</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>graphicsView</receiver>
+   <slot>invalidateScene()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>686</x>
+     <y>539</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>432</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
